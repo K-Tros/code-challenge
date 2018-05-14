@@ -30,6 +30,8 @@ public class Main {
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
             String[] splitString = line.split("=");
+            // Ignore any incorrectly formatted input data.
+            // Must be "key=value" format, one per line.
             if (splitString.length == 2) {
                 dataMap.put(splitString[0].trim(), splitString[1].trim());
             }

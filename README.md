@@ -6,7 +6,7 @@ solution to a straightforward, but open-ended, problem. You can use
 any language you are most comfortable with, and you are free to use
 existing libraries. It can be solved in a variety of ways but we've
 structured it so that you won't be able to to use a single off the
-shelf solution. 
+shelf solution.
 
 Program
 -------
@@ -68,6 +68,14 @@ Considerations
 
 Good luck!
 
+Notes from Developer
+--------------------
 
-
-
+Couple of notes about things I noticed while implementing my solution.
+First, the test script assumes that an output directory already exists when it
+is run. My solution was to simply add a directory called 'output' before running
+the test. Second, the test script also creates empty files (specifically
+output/4) even though the expected folder does not contain a file 4. While my
+program does not write anything to the file, the test script still creates it
+and flags it as test-failed. My solution to this was to add an empty file 4 to
+the expected directory to compensate for the test script.
